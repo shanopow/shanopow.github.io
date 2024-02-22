@@ -98,23 +98,52 @@
           The navigation system for the UI was then decided on fully here. We would have a Classroom, within it subjects were viewable to click
           as a shortcut, and then within them sections. The unique functionality behind each of these was left to later.
       </p>
+      <p>
+        This week was useful as a time to organise and plan ahead. We took care to ensure the features we were
+        adding were not likely to cause problems further down to line.
+      </p>
     </article>
     
     <h2>Week 5</h2>
     <article>
       <p>
-          
+          Week 5 was focused on taking the previously set out groundwork and expanding on it. In terms of file running, this meant finally
+          implementing file running. With the previous infrastructure in place, this would not be too difficult.
+          A Docker container was needed to run the file and so all that was needed was to run a Docker container with a shell script,
+          which would talke the arguments of the file location. This was not difficult, yet there were a number of features missing with this basic version.
+          Arguments, taking the output, and displaying it to the user were still to be implemented. 
+      </p>
+      <p>
+        Our number of endpoints was larely now finished, and most of the Express code was now refactored.
+        This meant that a number of endpoints had been moved out of the index file, and placed into separate routers.
+        Annoying, we could not move the file uploading route, due to bug described in Week 3.
+        This was however, the only real outlier.
       </p>
     </article>
     
     <h2>Week 6</h2>
     <article>
-
+      <p>
+        This week was focused on the User Interface. Our fovcus had been primarily on the backend system, 
+        and so the user experience had been neglected. We would need to focus on the UI for a week in order to get it up to speed. This would also
+        coincide with our desire to link these new backend system up to make a continuous system. Getting output from our file runner to the user
+        was a priority within this overall goal.
+      </p>
+      <p>
+        We had become more confident in the design we wanted and now with the routes defined for the user, it is easier to realise the design.
+        The main pages for our system were now complete, albeit with some bugs. By this point we were feeling the pressure form our limited time and 
+        so little consideration was put towards actually allowing the UI to be bug free. Instead we made static pages to test the new UI
+        on and left the bug fixing until later. One factor that was slowing us down at this point was the disorganisation of our Svelte pages.
+        As we now had a large amount of pages, it was becoming difficult to quality assure new features across all of these pages.
+        We had only limited componentisation for items such as the navbar and tabs, and so we were relying too heavily on standard pages. 
+      </p>
     </article>
     
     <h2>Week 7</h2>
     <article>
-
+      <p>
+        
+      </p>
     </article>
     
     <h2>Week 8</h2>
