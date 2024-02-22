@@ -32,28 +32,79 @@
         <p>
             One final item we did was to begin working on the concept of the UI. 
             We initially sketched out the UI on Excalidraw at this stage, and did some basic work on the colour scheme.
-            One pre-existing system we took inspiration from was Google Classroom.
+            One pre-existing system we took inspiration from was Google Classroom. The primary focus of this excercise was
+            to explore ways of displaying a Classroom and its contents in a concise way, to ensure users would not find 
+            the UI tedious to use.
         </p>
     </article>
     
     <h2>Week 2</h2>
     <article>
-
+      <p>
+            During week 2, further effort was spent on finishing CRUD operations. THis was largely still trivial, but time consuming.
+            As the amount of endpoints in the Express server was now rapidly increasing, it became apparent that keeping track of
+            these endpoints was going to be difficult. Therefore, we decided that having Swagger documentation was gonig to be useful,
+            at least for the majority of routes.  
+      </p>
+      <p>
+            SECOND THING WE DID IN WEEK 2 HERE
+      </p>
     </article>
 
     <h2>Week 3</h2>
     <article>
-
+      <p>
+          Week 3 was where we had a divergance in work we were doing. Shane was to work on file uploading, while Filip was to work on getting 
+          direct messages working.
+      </p>
+      <p>
+          Before starting on running files, it was first necessary to support uploading files to the server, and then saving them.
+          This was to be done with Multer, an npm package. On first inspection, this module was easy to use and so would 
+          be perfect for this task. However, upon setting Multer up, a number of problems began to emerge.
+          Firstly, the form through which to upload the file had issues around its Headers. Multer requires some headers and attributes
+          in a JavaScript formBody for it to save the incoming file. When Multer received the file, it would do nothing.
+          This was naturally frustrating, and after an hour of testing it became apparent the problem was we were appending
+          headers ourselves. This interfered with Multer, and instead the solution was to not append any headers at all.
+          This would allow the Browser to append the headers itself.
+      </p>
+      <p>
+          After this discovery, Multer would no longer throw any errors, instead it would just do nothing. This was far more frustrating, as now 
+          we had no indication as to the problem. This was then compounded by the fact that the Multer documentatiohn stated that 
+          TypeScript was in fact not fully supported, meaning that this problem could be simply unfixable. This was quite disheartening, 
+          but regardless we peristed.
+          At the end of the day, I simply moved the Multer middleware from the router it was being used in, to the application itself.
+          It suddenly started working. This was truly nonsensical, but we now had working file uploading.
+      </p>
+      <p>
+          WRITE ABOUT MESSAGING HERE
+      </p>
+      <p> 
+        This week can be summarised by a variety of vague and tedious bugs we needed to fix with our modules.
+        As such, this week was not particularly impressive, yet we still now had two vitasl pieces of infrastructure in place.
+      </p>
     </article>
     
     <h2>Week 4</h2>
     <article>
-
+      <p>
+          Week 4 can be considered more fruitful than the previous week. Once again, Shane was responsible for now using the previously set up Multer middleware to now support file running.
+          The first step to take is to prepare the file system for this. We would have a filesystem to hold uploaded files.
+          This meant we needed to have a command to run every time we create one of our objects. 
+          This was simple to implement, with only a single line of shell-script needed to do this. More time was spent on
+          deciding how to structure the directories instead. Some consideration had to be made for security here, so that users could not see other peoples code. 
+          This area around security was left to be decided on later, and instead the basic system was made the focus.
+      </p>
+      <p>
+          The navigation system for the UI was then decided on fully here. We would have a Classroom, within it subjects were viewable to click
+          as a shortcut, and then within them sections. The unique functionality behind each of these was left to later.
+      </p>
     </article>
     
     <h2>Week 5</h2>
     <article>
-
+      <p>
+          
+      </p>
     </article>
     
     <h2>Week 6</h2>
