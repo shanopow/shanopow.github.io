@@ -20,7 +20,7 @@
         <p>
             Week 1 was primarily focused around setting up the needed servers and database for our project.
             We felt that it would be wise to try and keep some working version, 
-            regardless of features so in the event of any issues, we could fall back on a previous verion that still
+            regardless of features so in the event of any issues, we could fall back on a previous version that still
             had some functionality.
         </p>
         <p>
@@ -32,7 +32,7 @@
         <p>
             One final item we did was to begin working on the concept of the UI. 
             We initially sketched out the UI on Excalidraw at this stage, and did some basic work on the colour scheme.
-            One pre-existing system we took inspiration from was Google Classroom. The primary focus of this excercise was
+            One pre-existing system we took inspiration from was Google Classroom. The primary focus of this exercise was
             to explore ways of displaying a Classroom and its contents in a concise way, to ensure users would not find 
             the UI tedious to use.
         </p>
@@ -41,20 +41,21 @@
     <h2>Week 2</h2>
     <article>
       <p>
-            During week 2, further effort was spent on finishing CRUD operations. THis was largely still trivial, but time consuming.
+            During week 2, further effort was spent on finishing CRUD operations. This was largely still trivial, but time consuming.
             As the amount of endpoints in the Express server was now rapidly increasing, it became apparent that keeping track of
-            these endpoints was going to be difficult. Therefore, we decided that having Swagger documentation was gonig to be useful,
+            these endpoints was going to be difficult. Therefore, we decided that having Swagger documentation was going to be useful,
             at least for the majority of routes.  
       </p>
       <p>
-            SECOND THING WE DID IN WEEK 2 HERE
+            Week 2 was not hugely productive due to teething issues with setup. Issue like Dockerisation of the servers and issues with deployment
+            meant that we spent too long fixing these issues and so development of actual functionality was delayed.
       </p>
     </article>
 
     <h2>Week 3</h2>
     <article>
       <p>
-          Week 3 was where we had a divergance in work we were doing. Shane was to work on file uploading, while Filip was to work on getting 
+          Week 3 was where we had a divergence in work we were doing. Shane was to work on file uploading, while Filip was to work on getting 
           direct messages working.
       </p>
       <p>
@@ -69,18 +70,22 @@
       </p>
       <p>
           After this discovery, Multer would no longer throw any errors, instead it would just do nothing. This was far more frustrating, as now 
-          we had no indication as to the problem. This was then compounded by the fact that the Multer documentatiohn stated that 
+          we had no indication as to the problem. This was then compounded by the fact that the Multer documentation stated that 
           TypeScript was in fact not fully supported, meaning that this problem could be simply unfixable. This was quite disheartening, 
-          but regardless we peristed.
+          but regardless we persisted.
           At the end of the day, I simply moved the Multer middleware from the router it was being used in, to the application itself.
           It suddenly started working. This was truly nonsensical, but we now had working file uploading.
       </p>
       <p>
-          WRITE ABOUT MESSAGING HERE
+          This week, Filip set to work on seeing how Messaging between users would work. Like Multer, this would be deceptively difficult.
+          Once again Typescript did not mix well with the WebRTC, and so many hours were lost trying to navigate this largely confusing area.
+          Once working for messaging, There was the next step to hook the system to the database. This was the easiest part of the process,
+          but once again was not devoid of cryptic errors. The documentation was sadly not sufficient for our Typescript implementation,
+          and so we needed to almost feel our way through the  
       </p>
       <p> 
         This week can be summarised by a variety of vague and tedious bugs we needed to fix with our modules.
-        As such, this week was not particularly impressive, yet we still now had two vitasl pieces of infrastructure in place.
+        As such, this week was not particularly impressive, yet we still now had two vital pieces of infrastructure in place.
       </p>
     </article>
     
@@ -110,11 +115,11 @@
           Week 5 was focused on taking the previously set out groundwork and expanding on it. In terms of file running, this meant finally
           implementing file running. With the previous infrastructure in place, this would not be too difficult.
           A Docker container was needed to run the file and so all that was needed was to run a Docker container with a shell script,
-          which would talke the arguments of the file location. This was not difficult, yet there were a number of features missing with this basic version.
+          which would take the arguments of the file location. This was not difficult, yet there were a number of features missing with this basic version.
           Arguments, taking the output, and displaying it to the user were still to be implemented. 
       </p>
       <p>
-        Our number of endpoints was larely now finished, and most of the Express code was now refactored.
+        Our number of endpoints was largely now finished, and most of the Express code was now refactored.
         This meant that a number of endpoints had been moved out of the index file, and placed into separate routers.
         Annoying, we could not move the file uploading route, due to bug described in Week 3.
         This was however, the only real outlier.
@@ -124,7 +129,7 @@
     <h2>Week 6</h2>
     <article>
       <p>
-        This week was focused on the User Interface. Our fovcus had been primarily on the backend system, 
+        This week was focused on the User Interface. Our focus had been primarily on the backend system, 
         and so the user experience had been neglected. We would need to focus on the UI for a week in order to get it up to speed. This would also
         coincide with our desire to link these new backend system up to make a continuous system. Getting output from our file runner to the user
         was a priority within this overall goal.
@@ -158,7 +163,21 @@
     
     <h2>Week 8</h2>
     <article>
-
+      <p>
+        Our last week working on the project was characterised by finishing up on a variety of documentation. This meant finishing
+        the Technical Manual and the User Manual. These documents had been largely neglected by us as we focused on more practical elements
+        of the project. We had left these documents to the end as we felt that continually working on them over the weeks would not have
+        been productive.
+      </p>
+      <p>
+        In addition to this, we also had aimed to polish some elements of the backend. This however, was de-prioritised due to the
+        pressure to complete the documentation. Features such as reducing file-running overhead were now unlikely to be completed in the final week,
+        which was unfortunate. This pressure was further compounded by some tedious issues with a Git merge, which would delay us by a day.
+      </p>
+      <p>
+        As we approached the end of the week, the only items left to do were the video and proof-reading our documentation. We had become more 
+        specific in setting out our goals for each due to the need for concise and productive work, and so were finished on Friday.
+      </p>
     </article>
 
 </body>
